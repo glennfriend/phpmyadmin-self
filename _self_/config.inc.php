@@ -2,7 +2,7 @@
 
 $cfg['blowfish_secret'] = '';
 $cfg['ThemeDefault']    = 'original';
-$cfg['ForceSSL']        = false;
+$cfg['ForceSSL']        = false;    // 4.6.0 版本後已移除
 
 // Servers configuration
 $i = 0;
@@ -10,7 +10,8 @@ $i = 0;
 // [1]
 $i++;
 $cfg['Servers'][$i] = getDefaultConfig();
-$cfg['Servers'][$i]['host'] = '127.0.0.1';  // localhost
+$cfg['Servers'][$i]['host']     = '127.0.0.1';  // localhost
+$cfg['Servers'][$i]['verbose']  = '[local] ' . $cfg['Servers'][$i]['host'];
 
 // [2]
 // ....
